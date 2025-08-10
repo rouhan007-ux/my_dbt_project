@@ -1,4 +1,4 @@
--- models/people_summary.sql
+
 SELECT
   job_title,
   COUNT(*) AS total_people,

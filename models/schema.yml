@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: people_summary
+    description: "Aggregated summary of people by job title"
+    columns:
+      - name: job_title
+        description: "Job title category"
+        tests:
+          - not_null
+      - name: total_people
+        description: "Number of people with this job title"
+        tests:
+          - not_null
+      - name: avg_age
+        description: "Average age of people with this job title"
+        tests:
+          - not_null
