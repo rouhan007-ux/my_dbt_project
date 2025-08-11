@@ -16,3 +16,57 @@ models:
         description: "Average age of people with this job title"
         tests:
           - not_null
+
+seeds:
+  - name: orders
+    description: "Raw order data"
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        tests:
+          - not_null
+      - name: product_id
+        tests:
+          - not_null
+      - name: order_date
+        tests:
+          - not_null
+
+  - name: customers
+    description: "Customer information"
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+      - name: name
+        tests:
+          - not_null
+
+  - name: products
+    description: "Product catalog"
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+          - unique
+      - name: category
+        tests:
+          - not_null
+
+  - name: payments
+    description: "Payment records"
+    columns:
+      - name: payment_id
+        tests:
+          - not_null
+          - unique
+      - name: order_id
+        tests:
+          - not_null
+      - name: amount
+        tests:
+          - not_null

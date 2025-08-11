@@ -7,5 +7,5 @@ profile: my_profile
 model-paths: ["models"]
 
 seeds:
-  my_dbt_project:
-    paths: ["data"]
+  paths: ["data"]
+  quote_columns: false
